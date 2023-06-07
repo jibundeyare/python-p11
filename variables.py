@@ -24,7 +24,7 @@ print(python_is_boring)
 
 # valeur nulle, null value 
 user_accepted_terms = None
-print(None)
+print(user_accepted_terms)
 
 # types de données
 print(type(number1))
@@ -37,7 +37,13 @@ print(type(user_accepted_terms))
 
 # vérification du type de données
 print(type(number1) is int)
+print(type(number1) is float)
 print(type(number1) is str)
+print(type(number1) is bool)
+
+# pour vérifier si une valeur est nulle ou non
+print(number1 is None)
+print(user_accepted_terms is None)
 
 # todo: interroger le type des autres variables...
 
