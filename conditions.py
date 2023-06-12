@@ -84,9 +84,28 @@ print(False and False)
 # False True    False
 # False False   False
 
+# pour retrouver la table, remplacez :
+# - A par "j'ai coupé l'électricité"
+# - B par "j'ai coupé l'eau"
+# - "A and B" par "puis-je partir 3 mois à l'étranger ?"
+
 # table de vérité de l'opérateur NAND (not and)
 # A     B       A and B     not (A and B)
 # True  True    True        False
 # True  False   False       True
 # False True    False       True
 # False False   False       True
+
+# utilisation de l'opérateur and pour voir si une variable est dans un interval de valeurs
+age = 10
+print(age)
+# l'âge est-il compris entre 12 et 25 ans inclus ?
+print(age >= 12 and age <= 25)
+
+age = 20
+print(age)
+print(age >= 12 and age <= 25)
+
+# syntaxe alternative spécifique à Python
+# équivalent de : age >= 12 and age <= 25
+print(12 <= age <= 25)
