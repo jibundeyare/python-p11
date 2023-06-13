@@ -109,3 +109,86 @@ print(age >= 12 and age <= 25)
 # syntaxe alternative spécifique à Python
 # équivalent de : age >= 12 and age <= 25
 print(12 <= age <= 25)
+
+# OU EXCLUSIF (xor)
+print(True ^ True)
+print(True ^ False)
+print(False ^ True)
+print(False ^ False)
+
+# table de vérité de l'opérateur XOR
+# A     B       A xor B
+# True  True    False
+# True  False   True
+# False True    True
+# False False   
+
+# exo courses (opérateur OU logique)
+# affichez :
+# - "je peux aller faire les courses" si on a au moins un moyen de paiement
+# - "je ne peux pas aller faire les courses" si je n'ai aucun moyen de paiement
+has_cash = bool(random.randint(0, 1))
+has_cb = bool(random.randint(0, 1))
+
+print(f'{has_cash = }')
+print(f'{has_cb = }')
+
+if has_cash or has_cb:
+    print("je peux aller faire les courses")
+else:
+    print("je ne peux pas aller faire les courses")
+
+# exo courses (opérateur ET logique)
+# remplissez le même cahier des charges mais avec l'opérateur ET
+if has_cash == False and has_cb == False:
+    print("je ne peux pas aller faire les courses")
+else:
+    print("je peux aller faire les courses")
+
+if not has_cash and not has_cb:
+    print("je ne peux pas aller faire les courses")
+else:
+    print("je peux aller faire les courses")
+
+# combinaison d'opérateurs AND et OR
+user_level = 1
+user_xp = 0
+user_social = 150
+
+# version buggée
+if user_level >= 3 and user_xp >= 100 or user_social >= 100:
+    print("Le joueur peut acheter du matériel")
+else:
+    print("Le joueur ne peut pas acheter de matériel")
+
+# version corrigée
+if user_level >= 3 and (user_xp >= 100 or user_social >= 100):
+    print("Le joueur peut acheter du matériel")
+else:
+    print("Le joueur ne peut pas acheter de matériel")
+
+# exo carte de réduction
+# détrminez la carte de réduction auquelle le voyageur a droit :
+# - entre 0 et 11 ans (inclus), le voyageur a droit à la gratuité
+# - entre 12 et 25 ans (inclus), le voyageur a droit à une réduction de 50 %
+# - entre 26 et 64 ans (inclus), le voyageur a droit à une réduction de 10 %
+# - au delà de 65 ans (inclus), le voyageur a droit à une réduction de 50 %
+age = random.randint(0, 99)
+
+if age >= 0 and age <= 11:
+    print("le voyageur a droit à la gratuité")
+elif age >= 12 and age <= 25:
+    print("le voyageur a droit à une réduction de 50 %")
+elif age >= 26 and age <= 64:
+    print("le voyageur a droit à une réduction de 10 %")
+elif age >= 65 and age <= 99:
+    print("le voyageur a droit à une réduction de 50 %")
+
+if age <= 11:
+    print("le voyageur a droit à la gratuité")
+elif age <= 25:
+    print("le voyageur a droit à une réduction de 50 %")
+elif age <= 64:
+    print("le voyageur a droit à une réduction de 10 %")
+else: # age >= 65
+    print("le voyageur a droit à une réduction de 50 %")
