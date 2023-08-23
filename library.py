@@ -7,7 +7,7 @@ def oui_non(value):
 def reverse_lookup(my_list, value):
     """Cette fonction prend en paramètre une liste et une valeur à rechercher. Elle renvoie l'index de la valeur si elle est trouvée, ou None si la valeur n'est pas trouvée.
 
-    my_list list la liste dans laquelle il fait chercher
+    my_list list la liste dans laquelle il faut chercher
     value any la valeur à rechercher
     return int si la valeur ou None si la valeur n'est pas trouvée
     """
